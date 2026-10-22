@@ -1,6 +1,6 @@
 <script lang="ts" module>
 import { cn } from 'cn';
-import type { WithElementRef } from '$lib/utils';
+import type { WithElementRef } from '#lib/utils.js';
 import { type VariantProps, tv } from 'tailwind-variants';
 import type { HTMLAnchorAttributes, HTMLButtonAttributes } from 'svelte/elements';
 
@@ -52,7 +52,7 @@ export type ButtonProps = WithElementRef<HTMLButtonAttributes> &
 <script lang="ts">
 import { IconCheck, IconCopy, IconDownload, IconExternalLink } from '@tabler/icons-svelte';
 import { onDestroy } from 'svelte';
-import { stroke } from '$lib/constants';
+import { stroke } from '#lib/constants.js';
 
 let {
 	variant = 'default',
@@ -64,7 +64,7 @@ let {
 	children,
 	class: className,
 	icon,
-	external = true,
+	external = href?.startsWith('http') ?? false,
 	onclick,
 	...props
 }: ButtonProps = $props();

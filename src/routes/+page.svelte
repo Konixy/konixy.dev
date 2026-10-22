@@ -1,8 +1,8 @@
 <script lang="ts">
 import confetti from 'canvas-confetti';
-import Button from '$lib/components/button.svelte';
-import { EMAIL, GITHUB_URL, LINKEDIN_URL, stroke, X_URL } from '$lib/constants';
-import Link from '$lib/components/link.svelte';
+import Button from '#lib/components/button.svelte';
+import { EMAIL, GITHUB_URL, LINKEDIN_URL, stroke, X_URL } from '#lib/constants.js';
+import Link from '#lib/components/link.svelte';
 import {
 	IconBrandGithub,
 	IconBrandLinkedin,

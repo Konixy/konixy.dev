@@ -1,8 +1,6 @@
 <script lang="ts">
-import { IconArrowUpRight } from '@tabler/icons-svelte';
 import { cn } from 'cn';
 import type { HTMLAnchorAttributes } from 'svelte/elements';
-import { stroke } from '$lib/constants';
 
 const { children, ...props }: HTMLAnchorAttributes = $props();
 </script>

@@ -4,9 +4,9 @@ import type { WithElementRef } from '#lib/utils.js';
 import { type VariantProps, tv } from 'tailwind-variants';
 import type { HTMLAnchorAttributes, HTMLButtonAttributes } from 'svelte/elements';
 
-const buttonVariants = tv({
+export const buttonVariants = tv({
 	base: cn(
-		'group relative flex w-fit items-center justify-between gap-2 rounded-xl text-sm font-normal transition-all outline-none',
+		'group cursor-pointer relative flex w-fit items-center justify-between gap-2 rounded-xl text-sm font-normal transition-all outline-none',
 		'[&>svg]:animate-in [&>svg]:fade-in [&>svg]:size-4 [&>svg]:shrink-0 [&>svg]:transition-colors',
 		'focus-visible:ring-offset-background focus-visible:ring-2 focus-visible:ring-current focus-visible:ring-offset-2'
 	),

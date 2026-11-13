@@ -2,10 +2,19 @@
 import { cn } from 'cn';
 import type { HTMLAnchorAttributes } from 'svelte/elements';
 
-const { children, ...props }: HTMLAnchorAttributes = $props();
+const {
+	href,
+	children,
+	external = href?.startsWith('http') ?? false,
+	...props
+}: HTMLAnchorAttributes & { external?: boolean } = $props();
 </script>
 
 <a
+	{href}
+	target={external ? '_blank' : undefined}
+	rel={external ? 'noopener noreferrer' : undefined}
+	{...props}
 	class={cn(
 		'group relative inline-flex items-center gap-0.5 text-blue-500',
 		'after:absolute after:bottom-px after:left-0 after:h-0.5 after:w-full after:rounded-full after:bg-blue-500/20',
@@ -13,7 +22,6 @@ const { children, ...props }: HTMLAnchorAttributes = $props();
 		'focus-visible:ring-offset-background rounded-md focus-visible:ring-2 focus-visible:ring-current focus-visible:ring-offset-2 focus-visible:outline-none',
 		props.class
 	)}
-	{...props}
 >
 	{@render children?.()}
 

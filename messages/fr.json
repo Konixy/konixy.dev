@@ -1,0 +1,15 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"switch_language": "Switch to English",
+	"full_stack_engineer": "Développeur full-stack",
+	"download_resume": "Télécharger mon CV",
+	"my_story": "Mon histoire",
+	"my_projects": "Mes projets",
+	"my_skills": "Mes compétences",
+	"project_description_djpilot": "Une application web full-stack pour aider les DJs à gérer leurs prestations, réservations, devis et plus encore.",
+	"project_description_better_svelte_email": "Une librairie open-source pour créer des emails avec Svelte et Tailwind.",
+	"project_description_shairport_sync_for_home_assistant": "Une integration de shairport-sync (AirPlay 2) pour Home Assistant OS.",
+	"project_description_buswidget": "Un widget pour iPhone et Android affichant les prochains départs de vos transports en commun favoris.",
+	"and_more_repositories": "...et {count} autres repos sur mon",
+	"email_copied": "Email copié dans le presse-papiers"
+}

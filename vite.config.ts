@@ -1,3 +1,4 @@
+import { paraglideVitePlugin } from '@inlang/paraglide-js';
 import adapter from '@sveltejs/adapter-vercel';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import tailwindcss from '@tailwindcss/vite';
@@ -7,9 +8,12 @@ import { defineConfig } from 'vite';
 export default defineConfig({
 	plugins: [
 		tailwindcss(),
-		sveltekit({
-			preprocess: vitePreprocess(),
-			adapter: adapter()
+		sveltekit({ preprocess: vitePreprocess(), adapter: adapter() }),
+		paraglideVitePlugin({
+			project: './project.inlang',
+			outdir: './src/lib/paraglide',
+			emitTsDeclarations: true,
+			strategy: ['cookie', 'preferredLanguage']
 		})
 	],
 	server: { port: 3000 },

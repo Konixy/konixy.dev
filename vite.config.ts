@@ -13,7 +13,7 @@ export default defineConfig({
 			project: './project.inlang',
 			outdir: './src/lib/paraglide',
 			emitTsDeclarations: true,
-			strategy: ['cookie', 'preferredLanguage']
+			strategy: ['cookie', 'preferredLanguage', 'baseLocale']
 		})
 	],
 	server: { port: 3000 },

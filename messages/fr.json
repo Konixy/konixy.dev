@@ -10,6 +10,8 @@
 	"project_description_better_svelte_email": "Une librairie open-source pour créer des emails avec Svelte et Tailwind.",
 	"project_description_shairport_sync_for_home_assistant": "Une integration de shairport-sync (AirPlay 2) pour Home Assistant OS.",
 	"project_description_buswidget": "Un widget pour iPhone et Android affichant les prochains départs de vos transports en commun favoris.",
+	"project_description_chat_nextjs": "Une application de chat en temps réel pour apprendre Next.js, WebSocket et GraphQL.",
+	"project_description_chat_svelte": "La même application refaite de zéro pour apprendre Svelte et SvelteKit.",
 	"and_more_repositories": "...et {count} autres repos sur mon",
 	"email_copied": "Email copié dans le presse-papiers"
 }

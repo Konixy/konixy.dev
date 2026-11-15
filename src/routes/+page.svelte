@@ -9,6 +9,7 @@ import {
 	IconBrandGit,
 	IconBrandGithub,
 	IconBrandGolang,
+	IconBrandGraphql,
 	IconBrandInstagram,
 	IconBrandLinkedin,
 	IconBrandMongodb,
@@ -136,8 +137,7 @@ const projects = $derived([
 		description: m.project_description_djpilot(),
 		href: 'https://djpilot.app',
 		icon: '/assets/djpilot.svg',
-		kind: 'product',
-		slopPercentage: 30
+		kind: 'product'
 	},
 	{
 		name: 'Better Svelte Email',
@@ -145,7 +145,6 @@ const projects = $derived([
 		href: 'https://github.com/Konixy/better-svelte-email',
 		icon: 'https://raw.githubusercontent.com/Konixy/better-svelte-email/refs/heads/main/apps/docs/static/favicon.svg',
 		kind: 'open-source',
-		slopPercentage: 20,
 		stars: data.starsCount,
 		forks: data.forksCount
 	},
@@ -154,16 +153,28 @@ const projects = $derived([
 		description: m.project_description_shairport_sync_for_home_assistant(),
 		href: 'https://github.com/Konixy/hass-shairport-app',
 		icon: 'https://raw.githubusercontent.com/Konixy/hass-shairport-app/refs/heads/main/shairport/icon.svg',
-		kind: 'open-source',
-		slopPercentage: 100
+		kind: 'open-source'
 	},
 	{
 		name: 'BusWidget',
 		description: m.project_description_buswidget(),
 		href: 'https://github.com/Konixy/buswidget',
 		icon: '/assets/buswidget.png',
-		kind: 'open-source',
-		slopPercentage: 100
+		kind: 'open-source'
+	},
+	{
+		name: 'Chat App (Next.js)',
+		description: m.project_description_chat_nextjs(),
+		href: 'https://github.com/Konixy/chat-nextjs',
+		icon: 'https://raw.githubusercontent.com/Konixy/chat-nextjs/refs/heads/main/public/icons/logo.svg',
+		kind: 'learning'
+	},
+	{
+		name: 'Chat App (SvelteKit)',
+		description: m.project_description_chat_svelte(),
+		href: 'https://github.com/Konixy/chat-svelte',
+		icon: 'https://raw.githubusercontent.com/Konixy/chat-svelte/refs/heads/main/static/logo.svg',
+		kind: 'learning'
 	}
 ]);
 
@@ -172,6 +183,7 @@ type SkillsCategory = { name: string; skills: Skill[] };
 type Skill = {
 	name: string;
 	icon: any;
+	href?: string;
 };
 
 const skillsCategory: SkillsCategory[] = [
@@ -180,15 +192,18 @@ const skillsCategory: SkillsCategory[] = [
 		skills: [
 			{
 				name: 'TypeScript',
-				icon: IconBrandTypescript
+				icon: IconBrandTypescript,
+				href: 'https://www.typescriptlang.org/'
 			},
 			{
 				name: 'Go',
-				icon: IconBrandGolang
+				icon: IconBrandGolang,
+				href: 'https://go.dev/'
 			},
 			{
 				name: 'Rust',
-				icon: IconBrandRust
+				icon: IconBrandRust,
+				href: 'https://www.rust-lang.org/'
 			}
 		]
 	},
@@ -197,19 +212,23 @@ const skillsCategory: SkillsCategory[] = [
 		skills: [
 			{
 				name: 'Svelte',
-				icon: IconBrandSvelte
+				icon: IconBrandSvelte,
+				href: 'https://svelte.dev/'
 			},
 			{
 				name: 'React',
-				icon: IconBrandReact
+				icon: IconBrandReact,
+				href: 'https://react.dev/'
 			},
 			{
 				name: 'Tailwind CSS',
-				icon: IconBrandTailwind
+				icon: IconBrandTailwind,
+				href: 'https://tailwindcss.com/'
 			},
 			{
 				name: 'Shadcn UI',
-				icon: ShadcnUi
+				icon: ShadcnUi,
+				href: 'https://ui.shadcn.com/'
 			}
 		]
 	},
@@ -218,27 +237,38 @@ const skillsCategory: SkillsCategory[] = [
 		skills: [
 			{
 				name: 'SvelteKit',
-				icon: IconBrandSvelte
+				icon: IconBrandSvelte,
+				href: 'https://svelte.dev/'
 			},
 			{
 				name: 'Next.js',
-				icon: IconBrandNextjs
+				icon: IconBrandNextjs,
+				href: 'https://nextjs.org/'
 			},
 			{
 				name: 'Bun',
-				icon: Bun
+				icon: Bun,
+				href: 'https://bun.sh/'
 			},
 			{
 				name: 'Prisma',
-				icon: IconBrandPrisma
+				icon: IconBrandPrisma,
+				href: 'https://www.prisma.io/'
 			},
 			{
 				name: 'MongoDB',
-				icon: IconBrandMongodb
+				icon: IconBrandMongodb,
+				href: 'https://www.mongodb.com/'
 			},
 			{
 				name: 'tRPC',
-				icon: Trpc
+				icon: Trpc,
+				href: 'https://trpc.io/'
+			},
+			{
+				name: 'GraphQL',
+				icon: IconBrandGraphql,
+				href: 'https://graphql.org/'
 			}
 		]
 	},
@@ -247,31 +277,38 @@ const skillsCategory: SkillsCategory[] = [
 		skills: [
 			{
 				name: 'Git',
-				icon: IconBrandGit
+				icon: IconBrandGit,
+				href: 'https://git-scm.com/'
 			},
 			{
 				name: 'GitHub',
-				icon: IconBrandGithub
+				icon: IconBrandGithub,
+				href: 'https://github.com/'
 			},
 			{
 				name: 'Bun',
-				icon: Bun
+				icon: Bun,
+				href: 'https://bun.sh/'
 			},
 			{
 				name: 'Docker',
-				icon: IconBrandDocker
+				icon: IconBrandDocker,
+				href: 'https://www.docker.com/'
 			},
 			{
 				name: 'Vercel',
-				icon: IconBrandVercelFilled
+				icon: IconBrandVercelFilled,
+				href: 'https://vercel.com/'
 			},
 			{
 				name: 'Figma',
-				icon: IconBrandFigma
+				icon: IconBrandFigma,
+				href: 'https://www.figma.com/'
 			},
 			{
 				name: 'Cursor',
-				icon: Cursor
+				icon: Cursor,
+				href: 'https://www.cursor.com/'
 			}
 		]
 	}
@@ -477,8 +514,10 @@ const skillsCategory: SkillsCategory[] = [
 									class={cn(
 										'rounded-lg px-2 py-1 text-xs text-nowrap',
 										project.kind === 'product'
-											? 'bg-blue-500/10 text-blue-500/90'
-											: 'bg-green-500/10 text-green-500/90'
+											? 'bg-violet-400/10 text-violet-400/90'
+											: project.kind === 'open-source'
+												? 'bg-green-500/10 text-green-500/90'
+												: 'bg-yellow-500/10 text-yellow-500/90'
 									)}
 								>
 									{project.kind}
@@ -502,12 +541,20 @@ const skillsCategory: SkillsCategory[] = [
 				{#each skillsCategory as category}
 					<div class="flex flex-col gap-2">
 						<div class="text-foreground/70 text-sm font-medium">{category.name}</div>
-						<div class="flex flex-row flex-wrap items-center gap-4">
+						<div class="flex flex-row flex-wrap items-center gap-1">
 							{#each category.skills as skill}
-								<div class="flex flex-row items-center gap-1">
-									<skill.icon class="size-4" />
+								<a
+									href={skill.href}
+									target="_blank"
+									rel="noopener noreferrer"
+									class="group hover:bg-foreground/10 relative flex flex-row items-center gap-1 rounded-lg px-2 py-1 transition-colors"
+								>
+									<skill.icon class="size-4 transition-opacity group-hover:opacity-0" />
+									<IconExternalLink
+										class="text-foreground/70 absolute size-4 opacity-0 transition-opacity group-hover:opacity-100"
+									/>
 									<span>{skill.name}</span>
-								</div>
+								</a>
 							{/each}
 						</div>
 					</div>

@@ -317,7 +317,7 @@ const skillsCategory: SkillsCategory[] = [
 
 <div
 	bind:this={container}
-	class="relative flex h-dvh flex-col gap-10 overflow-y-auto scroll-smooth px-6 sm:px-10 lg:flex-row lg:justify-between lg:px-16 pointer-fine:scrollbar-none"
+	class="scroll-fade scroll-fade-24 relative flex h-dvh flex-col gap-10 overflow-y-auto scroll-smooth px-6 sm:px-10 lg:flex-row lg:justify-between lg:px-16 pointer-fine:scrollbar-none"
 >
 	<div
 		class="relative flex flex-col gap-10 pt-10 sm:pt-16 lg:sticky lg:top-0 lg:justify-between lg:py-16"
